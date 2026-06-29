@@ -1,5 +1,68 @@
+<!DOCTYPE html>
 <html>
+<head>
+<title>Love You Bangaram ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: pink;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+  animation: zoom 2s infinite;
+  text-shadow: 0 0 20px red;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 30px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  from {
+    top: -50px;
+    transform: rotate(0deg);
+  }
+  to {
+    top: 100vh;
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+</head>
+
 <body>
-<h1 style="text-align:center;margin-top:40%;font-size:70px;">MISS you bangaram</h1>
+
+<h1>❤️ Love You Bangaram ❤️</h1>
+
+<script>
+for(let i=0;i<50;i++){
+ let heart=document.createElement("div");
+ heart.className="heart";
+ heart.innerHTML="❤️";
+ heart.style.left=Math.random()*100+"%";
+ heart.style.animationDuration=(2+Math.random()*5)+"s";
+ document.body.appendChild(heart);
+}
+</script>
+
 </body>
 </html>
